@@ -13,8 +13,10 @@ public class TrialsDao extends Dao {
 		begin();
 
 	//	Query query = getSession().createQuery("update Login set global_innodb_large_prefix = 'on'");
+		//Login login1 = new Login("rose","man");
 		idn =  (String)getSession().save(login);
-		//commit();
+		
+		commit();
 		close();
 		rollback();
 		return idn;
